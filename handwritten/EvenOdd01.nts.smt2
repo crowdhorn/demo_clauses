@@ -27,20 +27,20 @@
 		(IsEven ?NP ?R))
 	(IsOdd ?N ?R))))
 
-(assert(
-	forall((?N Int)(?R Int))
-	(=> (and
-		(= ?N 0)
-		(= ?R 1))
-	(IsEven ?N ?R))))
+;(assert(
+;	forall((?N Int)(?R Int))
+;	(=> (and
+;		(= ?N 0)
+;		(= ?R 1))
+;	(IsEven ?N ?R))))
 
-(assert(
-	forall((?N Int)(?R Int))
-	(=> (and
-		(not(= ?N 0))
-		(= ?N 1)
-		(= ?R 0))
-	(IsEven ?N ?R))))
+;(assert(
+;	forall((?N Int)(?R Int))
+;	(=> (and
+;		(not(= ?N 0))
+;		(= ?N 1)
+;		(= ?R 0))
+;	(IsEven ?N ?R))))
 
 (assert(
 	forall((?N Int)(?R Int)(?NP Int))
@@ -55,5 +55,4 @@
 	forall((?N Int)(?R Int))
   	(=>  (IsOdd ?N ?R) (= ?R (mod ?N 2)))))
 
-
-
+(check-sat)
